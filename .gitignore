@@ -1,3 +1,4 @@
+*.package-lock
 # Compiled source #
 ###################
 *.com
@@ -44,3 +45,4 @@ Thumbs.db
 *.config
 node_modules/
 .vscode/
+.env
