@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./src/bin/www",
-    "dev":"nodemon ./src/bin/www",
+    "dev": "nodemon ./src/bin/www",
     "db:create": "sequelize db:dropp & sequelize db:create & sequelize db:migrate & sequelize db:seed:all",
     "db:reset": "sequelize db:migrate:undo:all & sequelize db:migrate & sequelize db:seed:all"
   },
@@ -14,6 +14,7 @@
     "dotenv": "^16.3.1",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
+    "express-validator": "^7.0.1",
     "http-errors": "~1.6.3",
     "method-override": "^3.0.0",
     "morgan": "~1.9.1",
