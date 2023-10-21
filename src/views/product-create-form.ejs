@@ -52,8 +52,13 @@
               <small class="text-danger" style="color:red;font-size: 12px;"><%=errors.categoryId &&(errors.categoryId.msg&&errors.categoryId.msg) %></small>
               <% } %>
             </div>
-            <label for="description" class="form-label">Descipción:</label>
-            <textarea name="description" id="description" class="form-input"></textarea>
+            <div>
+              <label for="description" class="form-label">Descripción:</label>
+              <textarea name="description" id="description" class="form-input"></textarea>
+              <% if (locals.errors) { %>
+                <small class="text-danger" style="color:red;font-size: 12px;"><%=errors.description &&(errors.description.msg&&errors.description.msg) %></small>
+                <% } %>
+            </div>
 
           </div>
           <div class="col-12 col-lg-6 d-flex flex-column mt-3">

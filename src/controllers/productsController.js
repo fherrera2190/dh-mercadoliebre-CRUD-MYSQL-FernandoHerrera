@@ -43,7 +43,7 @@ const controller = {
   // Create -  Method to store
   store: (req, res) => {
     const errors = validationResult(req);
-    // console.log(req.file.filename);
+    // console.log(req.body.categoryId);
 
     if (!errors.isEmpty()) {
       console.log("Hay errores", req.body, errors.mapped());

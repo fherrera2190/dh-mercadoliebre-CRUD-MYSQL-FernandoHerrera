@@ -49,8 +49,9 @@ const getProductById = async id => {
 
 const createProduct = async data => {
   try {
-    const newProduct = await db.Product.createProduct(data);
-    // return getProductById(new)
+    console.log(data)
+    const newProduct = await db.Product.create(data);
+    return await getProductById(newProduct.id);
   } catch (error) {
     console.log(error);
     throw {

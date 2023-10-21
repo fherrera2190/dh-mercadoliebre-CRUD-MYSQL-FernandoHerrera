@@ -13,8 +13,8 @@ router.get("/", productsController.index);
 router.get("/create", productsController.create);
 router.post(
   "/create",
-  productValidation,
   upload.single("image"),
+  productValidation,
   productsController.store
 );
 
