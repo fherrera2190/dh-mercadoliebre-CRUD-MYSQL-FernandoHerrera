@@ -21,21 +21,21 @@
 
             <div>
               <label for="name" class="form-label">Nombre del producto (*) </label>
-              <input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input" value="<%=locals.old&&(locals.old.name&&locals.old.name) %>">
+              <input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input" value="<%=locals.old&&(locals.old.name&&locals.old.name)%>">
               <% if (locals.errors) { %>
               <small class="text-danger" style="color:red;font-size: 12px;"><%=errors.name &&(errors.name.msg&&errors.name.msg) %></small>
               <% } %>
             </div>
             <div>
               <label for="price" class="form-label">Precio del producto (*)</label>
-              <input type="number" id="price" name="price" min="1" placeholder="Ej: 5678" class="form-input" value="<%=locals.old&&(locals.old.price&&locals.old.price) %>">
+              <input type="number" id="price" name="price" min="1" placeholder="Ej: 5678" class="form-input" value="<%=locals.old&&(locals.old.price&&locals.old.price)%>">
               <% if (locals.errors) { %>
               <small class="text-danger" style="color:red;font-size: 12px;"><%=errors.price &&(errors.price.msg&&errors.price.msg) %></small>
               <% } %>
             </div>
             <div>
               <label for="discount" class="form-label">Descuento (*)</label>
-              <input type="number" id="discount" name="discount" placeholder="Ej: 15" class="form-input" value="<%=locals.old&&(locals.old.discount&&locals.old.discount) %>">
+              <input type="number" id="discount" name="discount" placeholder="Ej: 15" class="form-input" value="<%=locals.old&&(locals.old.discount&&locals.old.discount)%>">
               <% if (locals.errors) { %>
               <small class="text-danger" style="color:red;font-size: 12px;"><%=errors.discount &&(errors.discount.msg&&errors.discount.msg) %></small>
               <% } %>

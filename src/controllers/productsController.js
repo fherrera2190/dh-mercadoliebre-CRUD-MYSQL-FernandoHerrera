@@ -42,14 +42,15 @@ const controller = {
 
   // Create -  Method to store
   store: (req, res) => {
-    const { name, price, discount, categoryId, description } = req.body;
-
     const errors = validationResult(req);
     // console.log(req.file.filename);
+
     if (!errors.isEmpty()) {
       console.log("Hay errores", req.body, errors.mapped());
-      fs.existsSync(`./public/images/products/${req.file.filename}`) &&
+      req.file &&
+        fs.existsSync(`./public/images/products/${req.file.filename}`) &&
         fs.unlinkSync(`./public/images/products/${req.file.filename}`);
+
       db.Category
         .findAll()
         .then(categories => {
@@ -63,6 +64,7 @@ const controller = {
           console.log(err);
         });
     } else {
+      const { name, price, discount, categoryId, description } = req.body;
       db.Product
         .create({
           name: name.trim(),

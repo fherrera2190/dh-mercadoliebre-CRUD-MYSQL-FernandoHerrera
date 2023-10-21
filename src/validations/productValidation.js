@@ -3,7 +3,7 @@ const { check } = require("express-validator");
 module.exports = [
   check("name").notEmpty().withMessage("Debe ingresar un nombre"),
   check("price")
-    .notEmpty()
+    .isEmpty()
     .withMessage("Debe ingresar un precio")
     .isInt({ min: 1 })
     .withMessage("Debe ingresar un precio mayor a 0"),
